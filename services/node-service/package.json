@@ -9,7 +9,7 @@
     "build": "rimraf ./build && tsc && yarn run bundle:api",
     "pretest": "yarn run bundle:api",
     "start": "node -r dotenv/config build/index.js",
-    "start-dev": "nodemon",
+    "dev": "nodemon",
     "test": "jest --runInBand",
     "test:ci": "jest --ci --coverage --coverageReporters=text --coverageReporters=text-summary",
     "test:watch": "jest --watch"
