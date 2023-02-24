@@ -4,10 +4,6 @@
   "npmClient": "yarn",
   "version": "independent",
   "command": {
-    "publish": {
-      "registry": "https://registry.npmjs.org",
-      "private": true
-    },
     "version": {
       "conventionalCommits": true,
       "message": "chore(release): release",

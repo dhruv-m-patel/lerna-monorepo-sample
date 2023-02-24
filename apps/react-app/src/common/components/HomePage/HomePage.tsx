@@ -36,6 +36,7 @@ const useStyles = makeStyles(() => ({
     '& h2': {
       margin: '0 0 1rem 0',
       fontSize: '1.5rem',
+      color: StyleVariables.colors.red,
     },
     '& p': {
       margin: 0,
@@ -61,6 +62,7 @@ const useStyles = makeStyles(() => ({
   },
   titleH1: {
     margin: 0,
+    paddingBottom: '1rem',
     lineHeight: 1.15,
     fontSize: '4rem',
     textAlign: 'center',
@@ -86,7 +88,7 @@ export default function HomePage() {
     <Page>
       <div className={classes.main}>
         <Text as="h1" className={classes.titleH1}>
-          Welcome to Node React Monorepo
+          Welcome to Lerna Monorepo
         </Text>
         <br />
         <br />
@@ -102,7 +104,7 @@ export default function HomePage() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <Text as="h2">Monorepo</Text>
+            <Text as="h2">Monorepo Benefits</Text>
             <Text as="p">
               Manage your frontend, backend and packages in one place with Lerna
             </Text>
@@ -216,7 +218,7 @@ export default function HomePage() {
         <ul>
           <li>
             <a
-              href="https://github.com/dhruv-m-patel/node-react-monorepo/blob/master/apps/react-app/src/server/middleware/renderPage.tsx"
+              href="https://github.com/dhruv-m-patel/lerna-monorepo-sample/blob/master/apps/react-app/src/server/middleware/renderPage.tsx"
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -225,7 +227,7 @@ export default function HomePage() {
           </li>
           <li>
             <a
-              href="https://github.com/dhruv-m-patel/node-react-monorepo/blob/master/apps/react-app/src/client/renderApp.tsx"
+              href="https://github.com/dhruv-m-patel/lerna-monorepo-sample/blob/master/apps/react-app/src/client/renderApp.tsx"
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -234,7 +236,7 @@ export default function HomePage() {
           </li>
           <li>
             <a
-              href="https://github.com/dhruv-m-patel/node-react-monorepo/tree/master/apps/react-app/src/client/redux"
+              href="https://github.com/dhruv-m-patel/lerna-monorepo-sample/tree/master/apps/react-app/src/client/redux"
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -243,7 +245,7 @@ export default function HomePage() {
           </li>
           <li>
             <a
-              href="https://github.com/dhruv-m-patel/node-react-monorepo/blob/master/apps/react-app/src/client/redux/actions.ts#L37"
+              href="https://github.com/dhruv-m-patel/lerna-monorepo-sample/blob/master/apps/react-app/src/client/redux/actions.ts#L37"
               target="_blank"
               rel="noreferrer noopener"
             >
