@@ -10,8 +10,6 @@ describe('HomePage', () => {
         <HomePage />
       </MemoryRouter>
     );
-    expect(
-      screen.getByText(/Welcome to Node React Monorepo/)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Welcome to Lerna Monorepo/)).toBeInTheDocument();
   });
 });

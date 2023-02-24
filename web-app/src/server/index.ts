@@ -8,4 +8,4 @@ global.Promise = BluebirdPromise;
 
 const port: number = Number(process.env.REACT_APP_PORT) || 3000;
 
-runApp(app, { appName: 'Starter App', port });
+runApp(app, { appName: 'Web App', port });

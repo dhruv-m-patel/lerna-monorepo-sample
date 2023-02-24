@@ -1,6 +1,6 @@
 {
   "extends": [
-    "../../.eslintrc",
+    "../.eslintrc",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],

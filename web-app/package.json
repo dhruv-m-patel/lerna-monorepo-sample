@@ -1,7 +1,7 @@
 {
-  "name": "react-app",
+  "name": "web-app",
   "version": "1.0.8",
-  "description": "A starter app for frontend projects with universal react, material-ui and redux support",
+  "description": "A web app built with Typescript, React, Material-UI v4 and Redux",
   "main": "build/server/index.js",
   "private": true,
   "license": "MIT",

@@ -1,5 +1,5 @@
 const path = require('path');
-const JestConfig = require('../../jest.config');
+const JestConfig = require('../jest.config');
 
 const { projects, ...baseConfig } = JestConfig;
 
