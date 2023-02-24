@@ -3,5 +3,5 @@ import app from './app';
 
 runApp(app, {
   appName: 'Node Service',
-  port: Number(process.env.NODE_SERVICE_PORT) || 5000,
+  port: Number(process.env.NODE_SERVICE_PORT) || 4000,
 });
