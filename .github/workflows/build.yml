@@ -28,10 +28,7 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           CI: true
 
-      - name: Verify code formatting
-        run: yarn prettier:verify
-
-      - name: Lint Code
+      - name: Verify code standards & formatting
         run: yarn ci:lint
 
       - name: Build app

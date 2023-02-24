@@ -40,7 +40,7 @@
     "bundle:api": "lerna run bundle:api",
     "ci:build": "lerna run build --stream",
     "ci:test": "lerna run test:ci --stream",
-    "ci:lint": "eslint . && yarn run lint:spec",
+    "ci:lint": "eslint . && yarn run lint:spec && yarn prettier:verify",
     "clean": "lerna clean -y",
     "diff": "lerna diff",
     "start": "lerna run start --stream",
