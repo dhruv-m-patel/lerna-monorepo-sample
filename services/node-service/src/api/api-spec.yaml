@@ -1,0 +1,23 @@
+openapi: '3.0.3'
+info:
+  version: 1.0.0
+  title: node-service
+  description: Service contract for node-service with OpenApi 3.0 specifications
+servers:
+  - url: 'http://localhost:5000/api'
+tags:
+  - name: Health
+    description: Call to monitor the health of the service
+
+security:
+  - bearerAuth: []
+
+paths:
+  /health:
+    $ref: health.yaml
+  /message:
+    $ref: message.yaml
+
+components:
+  schemas:
+    $ref: schemas.yaml

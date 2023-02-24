@@ -1,0 +1,19 @@
+get:
+  description: Example message endpoint
+  tags:
+    - example
+    - testonly
+  security: []
+  responses:
+    200:
+      description: Message from server
+      content:
+        application/json:
+          schema:
+            $ref: 'schemas.yaml#/MessageResponse'
+    default:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: 'schemas.yaml#/MessageResponse'

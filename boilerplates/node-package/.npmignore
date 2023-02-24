@@ -1,0 +1,14 @@
+.idea
+node_modules
+coverage
+.nyc_output
+test_output.log
+tests
+jest.config.js
+.husky
+.babelrc
+src
+jest*.js
+**/*.test.js
+typings
+tsconfig.json

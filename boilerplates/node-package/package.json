@@ -1,0 +1,21 @@
+{
+  "name": "@dhruv-m-patel/node-package",
+  "version": "0.0.1",
+  "description": "A boilerplate node-package for writing reusable package for services",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "test": "jest --silent",
+    "test:ci": "jest --ci --coverage --coverageReporters=text --coverageReporters=text-summary",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "27.0.5",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "typescript": "4.3.4"
+  }
+}

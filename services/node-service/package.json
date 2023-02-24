@@ -1,0 +1,32 @@
+{
+  "name": "node-service",
+  "version": "0.2.6",
+  "main": "build/index.js",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "bundle:api": "swagger-cli bundle -t yaml -o build/api/api-spec.yaml src/api/api-spec.yaml",
+    "build": "rimraf ./build && tsc && yarn run bundle:api",
+    "pretest": "yarn run bundle:api",
+    "start": "node -r dotenv/config build/index.js",
+    "start-dev": "nodemon",
+    "test": "jest --runInBand",
+    "test:ci": "jest --ci --coverage --coverageReporters=text --coverageReporters=text-summary",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@dhruv-m-patel/express-app": "^1.2.6"
+  },
+  "devDependencies": {
+    "@apidevtools/swagger-cli": "^4.0.4",
+    "@types/jest": "^26.0.23",
+    "@types/supertest": "^2.0.11",
+    "jest": "27.0.5",
+    "nodemon": "^2.0.6",
+    "rimraf": "^3.0.2",
+    "supertest": "^6.1.3",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "typescript": "4.3.4"
+  }
+}

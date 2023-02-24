@@ -1,0 +1,66 @@
+{
+  "name": "@dhruv-m-patel/react-components",
+  "version": "1.2.6",
+  "description": "A library of react components for frontend projects",
+  "keywords": [
+    "react",
+    "components"
+  ],
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "types": "build/esm/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir build/cjs",
+    "build": "yarn run build:esm && yarn run build:cjs",
+    "clean": "rimraf build ",
+    "lint:ts": "eslint src/**/*.ts && eslint src/**/*.tsx",
+    "lint:css": "stylelint \"./src/**/*.tsx\"",
+    "lint": "yarn run lint:ts && yarn run lint:css",
+    "lint:fix": "eslint --fix .",
+    "prettier:verify": "prettier --check .",
+    "test": "jest --runInBand",
+    "test:ci": "jest --silent --ci --coverage --coverageReporters=text --coverageReporters=text-summary",
+    "test:changed": "jest --runInBand --onlyChanged",
+    "storybook": "start-storybook -p 6789",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@storybook/addon-a11y": "^6.1.11",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/react": "^6.1.11",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^11.2.2",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^18.14.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "clsx": "^1.1.1",
+    "eslint-plugin-react": "7.24.0",
+    "jest": "27.0.5",
+    "jest-junit": "^12.2.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-test-renderer": "^16.14.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "ts-jest": "^27.0.3",
+    "typescript": "4.3.4"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
