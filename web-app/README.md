@@ -1,8 +1,8 @@
-# starter-app
+# web-app
 
-A starter app for frontend projects with Typescript, material-ui and redux support
+A web application built with Typescript, React, Material-UI v4 and Redux
 
-## Project Structure
+## App Structure
 
 The application uses a fairly modern folder structure for project organization that goes into a universal react app.
 

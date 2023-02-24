@@ -5,8 +5,8 @@
     "node": ">= 14.17.0"
   },
   "workspaces": [
-    "services/*",
-    "apps/*"
+    "service",
+    "web-app"
   ],
   "devDependencies": {
     "@apidevtools/swagger-cli": "^4.0.4",
