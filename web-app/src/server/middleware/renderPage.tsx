@@ -56,26 +56,26 @@ export default function renderPage(
       : '';
 
     res.send(`
-      <!DOCTYPE html>
-      <html lang="en-US">
-        <head>
-          ${baseUrl}
-          <meta charset="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" priority="1" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-          <title>React App</title>
-          <link rel="preconnect" href="https://fonts.gstatic.com">
-          <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-          ${extractor.getLinkTags()}
-          <script id="stateData">window.__PRELOADED_STATE__ = ${JSON.stringify(
-            preloadedState
-          ).replace(/</g, '\\u003c')};</script>
-        </head>
-        <body>
-          <div id="root">${html}</div>
-          ${extractor.getScriptTags()}
-        </body>
-      </html>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    ${baseUrl}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" priority="1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>React App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    ${extractor.getLinkTags()}
+    <script id="stateData">window.__PRELOADED_STATE__ = ${JSON.stringify(
+      preloadedState
+    ).replace(/</g, '\\u003c')};</script>
+  </head>
+  <body>
+    <div id="root">${html}</div>
+    ${extractor.getScriptTags()}
+  </body>
+</html>
     `);
   }
 }
