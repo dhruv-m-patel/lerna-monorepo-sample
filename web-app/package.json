@@ -6,7 +6,9 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "tsc && webpack",
+    "build:client": "webpack",
+    "build:server": "tsc",
+    "build": "yarn build:server && yarn build:client",
     "clean": "rimraf build ",
     "start": "NODE_ENV=production node ./build/server/index.js",
     "dev": "nodemon",

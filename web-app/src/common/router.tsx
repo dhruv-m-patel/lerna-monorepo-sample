@@ -8,7 +8,7 @@ export default function Router() {
       <Route
         exact
         path="/"
-        component={loadable(() => import('./components/HomePage'))}
+        component={loadable(/* #LOADABLE */ () => import('./components/HomePage'))}
       />
     </Switch>
   );
