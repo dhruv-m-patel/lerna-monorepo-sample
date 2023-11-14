@@ -81,8 +81,29 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function HomePage() {
+interface HomePageProps {
+  getApiMessage: () => void;
+  isFetching?: boolean;
+  error?: string;
+  messageFromApi?: string;
+}
+
+export default function HomePage({
+  getApiMessage,
+  isFetching = false,
+  error,
+  messageFromApi,
+}: HomePageProps) {
+  const [message, setMessage] = React.useState<string | undefined>(undefined);
   const classes = useStyles();
+
+  React.useEffect(() => {
+    if (!messageFromApi && !isFetching && !error) {
+      getApiMessage();
+    } else {
+      setMessage(messageFromApi || error);
+    }
+  }, [isFetching, error, messageFromApi, getApiMessage]);
 
   return (
     <Page>
@@ -96,6 +117,13 @@ export default function HomePage() {
           Featured with reach support of modern tools to build your Node React
           projects
         </Text>
+        {!!message && (
+          <React.Fragment>
+            <br />
+            <br />
+            {message}
+          </React.Fragment>
+        )}
 
         <div className={classes.grid}>
           <a
