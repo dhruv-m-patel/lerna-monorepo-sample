@@ -572,7 +572,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.20.2"
 
-"@babel/plugin-syntax-dynamic-import@^7.8.3":
+"@babel/plugin-syntax-dynamic-import@^7.7.4", "@babel/plugin-syntax-dynamic-import@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-dynamic-import/-/plugin-syntax-dynamic-import-7.8.3.tgz#62bf98b2da3cd21d626154fc96ee5b3cb68eacb3"
   integrity sha512-5gdGbFon+PszYzqs83S3E5mpi7/y/8M9eC90MRTZfduQOYW76ig6SOSPNe41IG5LoP3FGBn2N0RjVDSQiS94kQ==
@@ -1238,24 +1238,10 @@
   resolved "https://registry.yarnpkg.com/@dhruv-m-patel/react-components/-/react-components-1.2.6.tgz#9637749ae3fd5401b9f613fa8a142b424cc5a44b"
   integrity sha512-+hwo9INWhHvytRx26JhjQ59yu+8n+3s9+kO6rOiC68LeVRrl+dgzsY9IK4ag5MdgsYJr4Bfz3Bt+kNOUdTePjA==
 
-"@dhruv-m-patel/web-app@^1.4.6":
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/@dhruv-m-patel/web-app/-/web-app-1.4.6.tgz#7da8434027a39ce8037075ea5189202fb1f41ca8"
-  integrity sha512-FX3Vv0uFp2ubMBVqnLPz91AEkr0ke3bcNvfq8sMjTpzef0Ci88End7koZpKpFviv00qh5iKzde3XVF0qIjybow==
-  dependencies:
-    "@types/express-session" "^1.17.3"
-    "@types/uuid" "^8.3.0"
-    cors "^2.8.5"
-    express "^4.17.1"
-    express-enrouten "^1.3.0"
-    express-session "^1.17.2"
-    fetch-everywhere "^1.0.5"
-    morgan "^1.10.0"
-    terser-webpack-plugin "^4.2.3"
-    uuid "^8.3.2"
-    webpack "^4.44.2"
-    webpack-manifest-plugin "^3.0.0"
-    webpack-node-externals "^2.5.2"
+"@dhruv-m-patel/web-app@^1.4.9":
+  version "1.4.9"
+  resolved "https://registry.yarnpkg.com/@dhruv-m-patel/web-app/-/web-app-1.4.9.tgz#85e180b7f60b3c8a6847e85fdd86ead233f85e22"
+  integrity sha512-ubUszkkzDLuE1RTQ39o4sENcwJKNCem5zfRDgc/KzkU22YltzmCJNz2Uh3hLJXjfX2lZYSdp60mdoyMjGShD0A==
 
 "@discoveryjs/json-ext@^0.5.3":
   version "0.5.7"
@@ -1656,6 +1642,13 @@
     validate-npm-package-license "^3.0.4"
     validate-npm-package-name "^4.0.0"
     yargs-parser "20.2.4"
+
+"@loadable/babel-plugin@^5.16.1":
+  version "5.16.1"
+  resolved "https://registry.yarnpkg.com/@loadable/babel-plugin/-/babel-plugin-5.16.1.tgz#6d0aa6d4b26c5ae2e1a4469b05d77e0438874d96"
+  integrity sha512-y+oKjRTt5XXf907ReFxiZyQtkYiIa4NAPQYlxb2qh5rUO/UsOKPq2PhCSHvfwoZOUJaMsY0FnoAPZ6lhFZkayQ==
+  dependencies:
+    "@babel/plugin-syntax-dynamic-import" "^7.7.4"
 
 "@loadable/component@^5.14.1":
   version "5.15.3"
@@ -3240,13 +3233,6 @@
     "@types/qs" "*"
     "@types/range-parser" "*"
 
-"@types/express-session@^1.17.3":
-  version "1.17.6"
-  resolved "https://registry.yarnpkg.com/@types/express-session/-/express-session-1.17.6.tgz#1c8881ba0dc836ffbf1071b2f020d60fcca0f08c"
-  integrity sha512-L6sB04HVA4HEZo1hDL65JXdZdBJtzZnCiw/P7MnO4w6746tJCNtXlHtzEASyI9ccn9zyOw6IbqQuhVa03VpO4w==
-  dependencies:
-    "@types/express" "*"
-
 "@types/express@*", "@types/express@^4.17.12":
   version "4.17.17"
   resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.17.tgz#01d5437f6ef9cfa8668e616e13c2f2ac9a491ae4"
@@ -3616,11 +3602,6 @@
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
   integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
-
-"@types/uuid@^8.3.0":
-  version "8.3.4"
-  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.4.tgz#bd86a43617df0594787d38b735f55c805becf1bc"
-  integrity sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==
 
 "@types/webpack-env@^1.16.0":
   version "1.18.0"
@@ -7328,7 +7309,7 @@ express-openapi-validator@^4.12.14:
     ono "^7.1.3"
     path-to-regexp "^6.2.0"
 
-express-session@^1.17.2:
+express-session@^1.17.3:
   version "1.17.3"
   resolved "https://registry.yarnpkg.com/express-session/-/express-session-1.17.3.tgz#14b997a15ed43e5949cb1d073725675dd2777f36"
   integrity sha512-4+otWXlShYlG1Ma+2Jnn+xgKUZTMJ5QD3YvfilX3AcocOAbIkVylSWEklzALe/+Pu4qV6TYBj5GwOBFfdKqLBw==
@@ -15717,18 +15698,18 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
-webpack-manifest-plugin@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-3.2.0.tgz#28290be3005f27867b2c7d8c52c01d0c7876033d"
-  integrity sha512-68b94EUjHrvUy+um+lmkIKHyfsFkJFDr+7s/GqLIhTSB6i9QzprQph8XOYnJU7ANqTyYr5g5Ng/DrAH0g3wjog==
+webpack-manifest-plugin@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-4.1.1.tgz#10f8dbf4714ff93a215d5a45bcc416d80506f94f"
+  integrity sha512-YXUAwxtfKIJIKkhg03MKuiFAD72PlrqCiwdwO4VEXdRO5V0ORCNwaOwAZawPZalCbmH9kBDmXnNeQOw+BIEiow==
   dependencies:
     tapable "^2.0.0"
     webpack-sources "^2.2.0"
 
-webpack-node-externals@^2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/webpack-node-externals/-/webpack-node-externals-2.5.2.tgz#178e017a24fec6015bc9e672c77958a6afac861d"
-  integrity sha512-aHdl/y2N7PW2Sx7K+r3AxpJO+aDMcYzMQd60Qxefq3+EwhewSbTBqNumOsCE1JsCUNoyfGj5465N0sSf6hc/5w==
+webpack-node-externals@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/webpack-node-externals/-/webpack-node-externals-3.0.0.tgz#1a3407c158d547a9feb4229a9e3385b7b60c9917"
+  integrity sha512-LnL6Z3GGDPht/AigwRh2dvL9PQPFQ8skEpVrWZXLWBYmqcaojHNN0onvHzie6rq7EWKrrBfPYqNEzTJgiwEQDQ==
 
 webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
   version "1.4.3"
@@ -15825,9 +15806,9 @@ whatwg-encoding@^1.0.5:
     iconv-lite "0.4.24"
 
 whatwg-fetch@>=0.10.0:
-  version "3.6.2"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz#dced24f37f2624ed0281725d51d0e2e3fe677f8c"
-  integrity sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==
+  version "3.6.19"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.6.19.tgz#caefd92ae630b91c07345537e67f8354db470973"
+  integrity sha512-d67JP4dHSbm2TrpFj8AbO8DnL1JXL5J9u0Kq2xW6d0TFDbCA3Muhdt8orXC22utleTVj7Prqt82baN6RBvnEgw==
 
 whatwg-mimetype@^2.3.0:
   version "2.3.0"
