@@ -4,7 +4,10 @@ const { loadableTransformer } = require('loadable-ts-transformer');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = () => {
-  const webpackConfig = getWebpackConfig(process.env.NODE_ENV, path.resolve(__dirname));
+  const webpackConfig = getWebpackConfig(
+    process.env.NODE_ENV,
+    path.resolve(__dirname)
+  );
 
   webpackConfig.module.rules[1] = {
     ...webpackConfig.module.rules[1],
