@@ -2,5 +2,9 @@
   "watch": ["src/server"],
   "ext": "ts,js,json",
   "ignore": ["src/server/**/*.spec.ts"],
+  "execMap": {
+    "js": "babel-node",
+    "ts": "ts-node"
+  },
   "exec": "NODE_ENV=development ts-node  -r dotenv/config src/server/index.ts"
 }

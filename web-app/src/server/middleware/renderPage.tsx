@@ -33,28 +33,48 @@ export default function renderPage(
       request.initialState = preloadedState;
     }
 
-    const html = ReactDOMServer.renderToString(
+    // const statsFile = path.join(
+    //   process.cwd(),
+    //   './build-static/loadable-stats.json'
+    // );
+
+    const nodeStats = path.resolve(
+      process.cwd(),
+      './build-static/node/loadable-stats.json',
+    )
+
+    const webStats = path.resolve(
+      process.cwd(),
+      './build-static/web/loadable-stats.json',
+    )
+
+
+    // const extractor = new ChunkExtractor({
+    //   statsFile,
+    //   entrypoints: ['client'],
+    //   publicPath: '/',
+    // });
+
+    const nodeExtractor = new ChunkExtractor({ entrypoints: ['client'], statsFile: nodeStats, publicPath: '/node' });
+    const { default: App } = nodeExtractor.requireEntrypoint();
+
+    const webExtractor = new ChunkExtractor({ entrypoints: ['client'], statsFile: webStats, publicPath: '/web' })
+    const jsx = webExtractor.collectChunks(
       <StaticRouter location={req.url} context={context}>
         <ReduxStateDecorator initialState={preloadedState}>
+          <App />
           <Router />
         </ReduxStateDecorator>
       </StaticRouter>
     );
 
-    const statsFile = path.join(
-      process.cwd(),
-      './build-static/loadable-stats.json'
-    );
-    const extractor = new ChunkExtractor({
-      statsFile,
-      entrypoints: ['client'],
-      publicPath: '/',
-    });
+    const html = ReactDOMServer.renderToString(jsx);
 
     const baseUrl = process.env.BASE_URL
       ? `<base href="${process.env.BASE_URL}">`
       : '';
 
+    res.set('content-type', 'text/html')
     res.send(`
 <!DOCTYPE html>
 <html lang="en-US">
@@ -66,14 +86,14 @@ export default function renderPage(
     <title>React App</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    ${extractor.getLinkTags()}
+    ${webExtractor.getLinkTags()}
     <script id="stateData">window.__PRELOADED_STATE__ = ${JSON.stringify(
       preloadedState
     ).replace(/</g, '\\u003c')};</script>
   </head>
   <body>
     <div id="root">${html}</div>
-    ${extractor.getScriptTags()}
+    ${webExtractor.getScriptTags()}
   </body>
 </html>
     `);
